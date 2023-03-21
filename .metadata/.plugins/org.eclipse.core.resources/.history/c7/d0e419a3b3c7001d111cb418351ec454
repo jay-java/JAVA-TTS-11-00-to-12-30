@@ -1,0 +1,7 @@
+package basic;
+
+public class StaiticKeyword {
+	public static void main(String[] args) {
+		
+	}
+}

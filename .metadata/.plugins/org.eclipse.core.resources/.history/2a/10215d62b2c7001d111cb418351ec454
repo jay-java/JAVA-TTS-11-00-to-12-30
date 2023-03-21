@@ -1,0 +1,17 @@
+package OOPS;
+
+class Area {
+	public void findArea(int l,int b) {
+		System.out.println("area of rectangle : "+(l*b));
+	}
+
+	public void findArea(int h,double b) {
+		System.out.println("area ");
+	}
+}
+
+public class Polymorphism {
+	public static void main(String[] args) {
+
+	}
+}

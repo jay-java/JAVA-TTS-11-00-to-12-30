@@ -1,0 +1,12 @@
+package OOPS;
+class P1{
+	
+}
+class C1 extends P{
+	
+}
+public class MUlitlevel {
+	public static void main(String[] args) {
+		
+	}
+}

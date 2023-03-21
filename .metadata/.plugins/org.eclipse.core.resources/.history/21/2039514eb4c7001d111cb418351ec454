@@ -1,0 +1,15 @@
+package basic;
+class Data{
+	int rollno;
+	double per;
+	String name;
+	static String cname = "TOPS";
+	public void rollno(int rollno) {
+		
+	}
+}
+public class StaiticKeyword {
+	public static void main(String[] args) {
+		
+	}
+}

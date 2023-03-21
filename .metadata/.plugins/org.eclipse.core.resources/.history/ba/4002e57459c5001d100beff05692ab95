@@ -1,0 +1,14 @@
+package OOPS;
+
+
+class P{
+	
+}
+class C extends P{
+	
+}
+public class InheritanceDemo {
+	public static void main(String[] args) {
+		    
+	}
+}

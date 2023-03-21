@@ -1,0 +1,10 @@
+package basic;
+
+public class StringDemo {
+	public static void main(String[] args) {
+		char c[] = {'j','a','v','a'};
+		System.out.println(c);
+		String s= "java";
+		System.out.println(s);
+	}
+}

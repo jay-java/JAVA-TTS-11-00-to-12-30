@@ -1,0 +1,16 @@
+package OOPS;
+
+
+class P{
+	public void run() {
+		System.out.println("run  in parent");
+	}
+}
+class C extends P{
+	
+}
+public class InheritanceDemo {
+	public static void main(String[] args) {
+		    
+	}
+}

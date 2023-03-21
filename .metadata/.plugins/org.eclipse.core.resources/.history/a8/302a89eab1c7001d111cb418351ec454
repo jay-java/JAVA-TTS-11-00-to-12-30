@@ -1,0 +1,17 @@
+package OOPS;
+
+class Area {
+	public void findArea() {
+
+	}
+
+	public void findArea() {
+
+	}
+}
+
+public class Polymorphism {
+	public static void main(String[] args) {
+
+	}
+}

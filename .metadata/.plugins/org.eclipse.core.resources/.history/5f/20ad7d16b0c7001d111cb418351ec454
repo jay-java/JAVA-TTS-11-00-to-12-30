@@ -1,0 +1,15 @@
+package OOPS;
+class Parent1{
+	
+}
+class Parent2{
+	
+}
+class ChildClass{
+	
+}
+public class Multiple {
+	public static void main(String[] args) {
+		
+	}
+}

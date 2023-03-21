@@ -1,0 +1,22 @@
+package OOPS;
+class P1{
+	public int run() {
+		return 214748;
+	}
+}
+class C1 extends P1{
+	String name = "java";
+	public String method() {
+		return name;
+	}
+}
+class GC1 extends C1{
+	public double returnDouble() {
+		reutrn 4.3;
+	}
+}
+public class MUlitlevel {
+	public static void main(String[] args) {
+		
+	}
+}

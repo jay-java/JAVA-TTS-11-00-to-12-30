@@ -1,0 +1,10 @@
+package basic;
+
+public class ArrrayDemo {
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5};
+		for(int index =0;index<arr.length;index++) {
+			
+		}
+	}
+}

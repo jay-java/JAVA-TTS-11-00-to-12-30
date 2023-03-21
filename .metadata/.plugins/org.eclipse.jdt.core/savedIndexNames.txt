@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\jay-pc\JAVA TTS 11-00 to 12-30\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3011209426.index
+615655408.index
+2950284601.index

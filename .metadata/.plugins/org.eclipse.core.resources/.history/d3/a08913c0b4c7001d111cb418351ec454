@@ -1,0 +1,26 @@
+package basic;
+class Data{
+	int rollno;
+	double per;
+	String name;
+	static String cname = "TOPS";
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+	public int getRollno() {
+		return rollno;
+	}
+	Data(int rollno,double per,String name){
+		this.rollno = rollno;
+		this.per = per;
+		this.name= name;
+	}
+	public void showData() {
+		System.out.println("Rollno : "+rollno+" Per : "+per+" Name : "+name+" Cname : "+cname);
+	}
+}
+public class StaiticKeyword {
+	public static void main(String[] args) {
+		
+	}
+}
