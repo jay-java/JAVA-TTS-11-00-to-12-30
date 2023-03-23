@@ -6,4 +6,13 @@
     <fullyQualifiedTypeName name="constructor.Data1"/>
     <fullyQualifiedTypeName name="OOPS.AA"/>
     <fullyQualifiedTypeName name="OOPS.C"/>
+    <fullyQualifiedTypeName name="OOPS.GC1"/>
+    <fullyQualifiedTypeName name="OOPS.ChildClass"/>
+    <fullyQualifiedTypeName name="OOPS.Ch1"/>
+    <fullyQualifiedTypeName name="OOPS.Ch2"/>
+    <fullyQualifiedTypeName name="OOPS.Ch3"/>
+    <fullyQualifiedTypeName name="OOPS.Area"/>
+    <fullyQualifiedTypeName name="java.lang.Record"/>
+    <fullyQualifiedTypeName name="OOPS.Rectangle"/>
+    <fullyQualifiedTypeName name="basic.Data"/>
 </qualifiedTypeNameHistroy>

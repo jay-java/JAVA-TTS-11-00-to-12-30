@@ -1,0 +1,29 @@
+package OOPS;
+class Data{
+	int id;
+	String name;
+	double salary;
+	public void setId(int id) {
+		this.id =id;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setSalaty(double salary) {
+		this.salary = salary;
+	}
+	public double getSalary() {
+		return salary;
+	}
+}
+public class ENcapsulationDmeo {
+	public static void main(String[] args) {
+		
+	}
+}

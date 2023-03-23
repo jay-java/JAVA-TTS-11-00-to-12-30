@@ -1,0 +1,9 @@
+package interfaceDemo;
+class CallingINterface{
+	
+}
+public class MainClass {
+	public static void main(String[] args) {
+		
+	}
+}

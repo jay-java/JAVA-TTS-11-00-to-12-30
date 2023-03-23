@@ -1,0 +1,14 @@
+package OOPS;
+class User{
+	int id = 1;
+	public void callId() {
+		id++;
+		System.out.println(id);
+	}
+}
+public class FinalKeyword {
+	public static void main(String[] args) {
+		User u = new User();
+		u.callId();
+	}
+}

@@ -1,0 +1,9 @@
+package OOPS;
+class Data{
+	
+}
+public class ENcapsulationDmeo {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,12 @@
+package OOPS;
+class Data{
+	int id;
+	String name;
+	double salary;
+	
+}
+public class ENcapsulationDmeo {
+	public static void main(String[] args) {
+		
+	}
+}

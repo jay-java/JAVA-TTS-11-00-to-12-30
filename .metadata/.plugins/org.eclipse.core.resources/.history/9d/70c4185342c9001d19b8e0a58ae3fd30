@@ -1,0 +1,17 @@
+package OOPS;
+class Data{
+	int id;
+	String name;
+	double salary;
+	public void setId(int id) {
+		this.id =id;
+	}
+	public getId() {
+		return id;
+	}
+}
+public class ENcapsulationDmeo {
+	public static void main(String[] args) {
+		
+	}
+}

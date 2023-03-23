@@ -1,0 +1,7 @@
+package ExceptionHandling;
+
+public class Exceptionhandle {
+	public static void main(String[] args) {
+		int i = 10;
+	}
+}
