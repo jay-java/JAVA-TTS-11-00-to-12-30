@@ -1,0 +1,8 @@
+package FileHandling;
+
+public class FileInputOUtputStream {
+	public static void main(String[] args) {
+		String msg ="file handling by file input output stream";
+		
+	}
+}

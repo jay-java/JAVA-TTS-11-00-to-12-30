@@ -1,0 +1,12 @@
+package FileHandling;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class FileInputOUtputStream {
+	public static void main(String[] args) throws FileNotFoundException {
+		String msg ="file handling by file input output stream";
+		FileOutputStream fos = new FileOutputStream("t1.txt");
+		
+	}
+}

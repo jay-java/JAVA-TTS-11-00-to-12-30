@@ -1,0 +1,31 @@
+package FileHandling;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+class Student{
+	int id;
+	String name;
+	double per;
+	Student(int id,String name,double per){
+		this.id = id;
+		this.name= name;
+		this.per=per;
+	}
+	@Override
+	public String toString() {
+		return "id : "+id+ " name : "+name+" per : "+per;
+	}
+}
+public class SerailizationDemo {
+	public static void main(String[] args) throws IOException {
+		Student s1 = new Student(1, "java", 60.6);
+		FileOutputStream fos = new FileOutputStream("student.txt");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(s1);
+		oos.flush();
+		System.out.println("object written successfully");
+	}
+}

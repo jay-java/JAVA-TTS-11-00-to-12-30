@@ -19,5 +19,6 @@ public class MainClass {
 		inter1.interface4();
 		inter2.interface5();
 		inter3.interface6();
+		c.run();
 	}
 }
