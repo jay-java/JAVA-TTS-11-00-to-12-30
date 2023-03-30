@@ -1,9 +1,0 @@
-package basic;
-class Data{
-	
-}
-public class StaiticKeyword {
-	public static void main(String[] args) {
-		
-	}
-}

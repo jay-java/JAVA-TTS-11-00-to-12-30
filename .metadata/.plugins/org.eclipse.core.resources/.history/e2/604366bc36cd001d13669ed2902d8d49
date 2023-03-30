@@ -1,0 +1,13 @@
+package CollectionDemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+//collection is framework in java which provides 
+//architecture to manipulate group of objects.
+//<generics>
+public class ListDemo {
+	public static void main(String[] args) {
+		List list = new ArrayList();
+	}
+}

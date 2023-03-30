@@ -1,0 +1,39 @@
+package CollectionDemo;
+class Info{
+	int rollno;
+	String name;
+	double per;
+	public Info(int rollno, String name, double per) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+		this.per = per;
+	}
+	public int getRollno() {
+		return rollno;
+	}
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPer() {
+		return per;
+	}
+	public void setPer(double per) {
+		this.per = per;
+	}
+	@Override
+	public String toString() {
+		return "Info [rollno=" + rollno + ", name=" + name + ", per=" + per + "]";
+	}
+}
+public class StudentData {
+	public static void main(String[] args) {
+		Info i1 = new Info();
+	}
+}
