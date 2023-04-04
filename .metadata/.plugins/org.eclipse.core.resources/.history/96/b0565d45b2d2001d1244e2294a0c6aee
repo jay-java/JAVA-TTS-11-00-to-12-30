@@ -1,0 +1,7 @@
+package Swing;
+
+public class SWingDemo {
+	public static void main(String[] args) {
+		
+	}
+}

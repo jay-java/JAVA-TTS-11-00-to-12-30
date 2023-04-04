@@ -1,0 +1,14 @@
+package CollectionDemo;
+
+import java.util.Hashtable;
+
+public class HashTableDEmo {
+	public static void main(String[] args) {
+		Hashtable table = new Hashtable();
+		table.put(1, "a");
+		table.put(null, "a");
+		table.put(1, "a");
+		table.put(1, "a");
+		table.put(1, null);
+	}
+}

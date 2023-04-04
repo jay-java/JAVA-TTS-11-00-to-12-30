@@ -1,5 +1,0 @@
-package interfaceDemo;
-
-public interface inter2 {
-	public void interface2();
-}

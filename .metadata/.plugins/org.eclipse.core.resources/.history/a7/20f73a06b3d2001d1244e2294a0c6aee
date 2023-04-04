@@ -1,0 +1,22 @@
+package Swing;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class SWingDemo {
+	JLabel l1,l2,l3,l4;
+	JTextField t1,t2,t3,t4;
+	JButton b1,b2,b3,b4;
+	public SWingDemo() {
+		JFrame fr = new JFrame("MyApp");
+		fr.setVisible(true);
+		fr.setSize(700, 500);
+		
+		
+	}
+	public static void main(String[] args) {
+		new SWingDemo();
+	}
+}

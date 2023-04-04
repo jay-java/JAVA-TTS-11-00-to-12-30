@@ -1,0 +1,12 @@
+package Swing;
+
+import javax.swing.JFrame;
+
+public class SWingDemo {
+	public SWingDemo() {
+		JFrame fr = new JFrame("MyApp");
+	}
+	public static void main(String[] args) {
+		
+	}
+}

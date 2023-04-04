@@ -14,6 +14,7 @@ public class MapDemo {
 		map.put("c++",2);
 		map.put(false, "python");
 		map.put(1, "python");
+		map.put(null, "abc");
 		System.out.println(map);
 		Set set = map.entrySet();
 		Iterator itr = set.iterator();
