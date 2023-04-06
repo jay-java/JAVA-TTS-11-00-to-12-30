@@ -1,7 +1,0 @@
-package CollectionDemo;
-
-public class StudentData {
-	public static void main(String[] args) {
-		
-	}
-}

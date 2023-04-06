@@ -1,8 +1,0 @@
-package CollectionDemo;
-//collection is framework in java which provides 
-//architecture to manipulate group of objects.
-public class ListDemo {
-	public static void main(String[] args) {
-		
-	}
-}

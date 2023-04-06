@@ -1,7 +1,0 @@
-package FileHandling;
-
-public class FileInputOUtputStream {
-	public static void main(String[] args) {
-		
-	}
-}
