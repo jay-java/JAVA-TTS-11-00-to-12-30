@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.UserDao;
 import model.User;
 
 /**
@@ -45,7 +46,9 @@ public class UserController extends HttpServlet {
 			u.setEmail(request.getParameter("email"));
 			u.setPassword(request.getParameter("password"));
 			System.out.println(u);
+			UserDao.insertUser(u);
+			request.setAttribute("msg", "data registered successfully");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 	}
-
 }
