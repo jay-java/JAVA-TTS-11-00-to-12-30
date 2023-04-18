@@ -16,15 +16,31 @@ if(msg!=null){
 	out.print(msg);
 }
 %>
-	<form>
+<%
+String msg1 = (String)request.getAttribute("msg1"); 
+%>
+<%
+if(msg1!=null){
+	out.print(msg1);
+}
+%>
+<%
+String msg2 = (String)request.getAttribute("msg2"); 
+%>
+<%
+if(msg2!=null){
+	out.print(msg2);
+}
+%>
+	<form action="UserController" method="post">
 		<table>
 			<tr>
 				<td>Email :</td>
-				<td><input type="email" name="name"></td>
+				<td><input type="email" name="email"></td>
 			</tr>
 			<tr>
 				<td>Password :</td>
-				<td><input type="password" name="name"></td>
+				<td><input type="password" name="password"></td>
 			</tr>
 			<tr>
 				<td><input type="submit" name="action" value="login"></td>
