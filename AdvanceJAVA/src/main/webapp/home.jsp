@@ -52,18 +52,20 @@
 				for (User u1 : list) {
 				%>
 				<tr>
-					<td><%=u1.getId() %></td>
-					<td><%=u1.getName() %></td>
-					<td><%=u1.getContact() %></td>
-					<td><%=u1.getAddress() %></td>
-					<td><%=u1.getEmail() %></td>
-					<td><%=u1.getPassword() %></td>
-					<td><form>
-						<input type="submit" name="action" value="edit">
-					</form></td>
-					<td><form>
-						<input type="submit" name="action" value="delete">
-					</form></td>
+					<td><%=u1.getId()%></td>
+					<td><%=u1.getName()%></td>
+					<td><%=u1.getContact()%></td>
+					<td><%=u1.getAddress()%></td>
+					<td><%=u1.getEmail()%></td>
+					<td><%=u1.getPassword()%></td>
+					<td><form action="UserController" method="post">
+							<input type="hidden" name="id" value="<%=u1.getId()%>">
+							<input type="submit" name="action" value="edit">
+						</form></td>
+					<td><form action="UserController" method="post">
+					<input type="hidden" name="id" value="<%=u1.getId()%>">
+							<input type="submit" name="action" value="delete">
+						</form></td>
 				</tr>
 				<%
 				}
@@ -71,9 +73,11 @@
 			</tbody>
 		</table>
 	</div>
-<div class="text-center">
-<h1><a href="logout.jsp">Logout</a></h1>
-</div>
+	<div class="text-center">
+		<h1>
+			<a href="logout.jsp">Logout</a>
+		</h1>
+	</div>
 
 
 
