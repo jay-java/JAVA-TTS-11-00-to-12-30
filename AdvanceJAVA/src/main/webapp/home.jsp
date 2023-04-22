@@ -17,6 +17,17 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+  <%
+  response.setHeader("Cache-Control","no-cache");
+  response.setHeader("Cache-Control","no-store");
+  response.setHeader("Pragma","no-cache");
+  response.setDateHeader ("Expires", 0);
+
+  if(session.getAttribute("data")==null)
+      response.sendRedirect("login.jsp");
+  %> 
+
 	<%
 	User u = null;
 	if (session.getAttribute("data") != null) {
