@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-      <%@include file="navbar.jsp" %>
+      <%@include file="seller-navbar.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,40 +35,41 @@
 
     <!-- Contact Start -->
     <div class="container-fluid">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Seller Login</span></h2>
-        <%String msg = (String)request.getAttribute("msg"); %>
-        <%if(msg!=null){ %>
-        <h4><span class="bg-secondary pr-3"><%out.print(msg); %></span></h4>
-        <%} %>
-         <%String msg1 = (String)request.getAttribute("msg1"); %>
-        <%if(msg1!=null){ %>
-        <h4><span class="bg-secondary pr-3"><%out.print(msg1); %></span></h4>
-        <%} %>
-          <%String msg2 = (String)request.getAttribute("msg2"); %>
-        <%if(msg2!=null){ %>
-        <h4><span class="bg-secondary pr-3"><%out.print(msg2); %></span></h4>
-        <%} %>
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Seller Registration</span></h2>
         <div class="row px-xl-5">
             <div class="col-lg-7 mb-5">
                 <div class="contact-form bg-light p-30">
                     <div id="success"></div>
-                    <form name="sentMessage" action="SellerController" method="post">
+                    <form action="SellerController" method="post" name="sentMessage">
+                    <div class="control-group">
+                            <input type="hidden" class="form-control" name="id" id="name" value="<%=s.getId() %>"
+                                required="required" data-validation-required-message="Please enter your name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
                         <div class="control-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
+                            <input type="text" class="form-control" name="name" id="name" value="<%=s.getName() %>"
+                                required="required" data-validation-required-message="Please enter your name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                         <div class="control-group">
+                            <input type="text" class="form-control" name="contact" id="name" value="<%=s.getContact() %>"
+                                required="required" data-validation-required-message="Please enter your name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                         <div class="control-group">
+                            <input type="text" class="form-control" name="address" id="name" value="<%=s.getAddress() %>"
+                                required="required" data-validation-required-message="Please enter your name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" name="email" id="email" value="<%=s.getEmail() %>"
                                 required="required" data-validation-required-message="Please enter your email" />
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
-                            <input type="password" class="form-control" id="subject" name="password" placeholder="Your Password"
-                                required="required" data-validation-required-message="Please enter a Password" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        
                         <div>
-                            <button class="btn btn-primary py-2 px-4" type="submit" name="action" value="login" id="sendMessageButton">
-                                Login</button>
+                            <button class="btn btn-primary py-2 px-4" type="submit" name="action" value="update" id="sendMessageButton">
+                                Update</button>
                         </div>
-                        <a href="seller-forgot-password.jsp">Forgot Password</a>
                     </form>
                 </div>
             </div>

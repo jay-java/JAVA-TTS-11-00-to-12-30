@@ -1,3 +1,4 @@
+<%@page import="model.Seller"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <%
+    Seller s = null;
+    if(session.getAttribute("data")!=null){
+    	s = (Seller)session.getAttribute("data");
+    }
+    else{
+    	response.sendRedirect("seller-login.jsp");
+    }
+    %>
  <!-- Navbar Start -->
     <div class="container-fluid bg-dark mb-30">
         <div class="row px-xl-5">
@@ -16,18 +26,18 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.jsp" class="nav-item nav-link active">Home</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Register <i class="fa fa-angle-down mt-1"></i></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Product <i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                    <a href="seller-registration.jsp" class="dropdown-item">As Seller</a>
-                                    <a href="customer-registration.jsp" class="dropdown-item">As Customer</a>
+                                    <a href="seller-registration.jsp" class="dropdown-item">Upload Product</a>
+                                    <a href="customer-registration.jsp" class="dropdown-item">Manage Paroduct</a>
                                 </div>
                             </div>
                              <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Login <i class="fa fa-angle-down mt-1"></i></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%=s.getName() %> <i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                    <a href="seller-login.jsp" class="dropdown-item">As Seller</a>
-                                    <a href="customer-login.jsp" class="dropdown-item">As Customer</a>
-                                    <a href="admin-login.jsp" class="dropdown-item">As Admin</a>
+                                    <a href="seller-profile.jsp" class="dropdown-item">Profile</a>
+                                    <a href="seller-change-password.jsp" class="dropdown-item">Change Password</a>
+                                    <a href="seller-logout.jsp" class="dropdown-item">Logout</a>
                                 </div>
                             </div>
                         </div>
@@ -37,5 +47,6 @@
         </div>
     </div>
     <!-- Navbar End -->
+
 </body>
 </html>

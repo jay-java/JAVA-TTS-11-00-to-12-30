@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.SellerDao;
 import model.Seller;
@@ -48,6 +49,42 @@ public class SellerController extends HttpServlet {
 			SellerDao.insertSeller(s);
 			request.setAttribute("msg","registered successfully");
 			request.getRequestDispatcher("seller-login.jsp").forward(request, response);
+		}
+		else if(action.equalsIgnoreCase("login")) {
+			Seller s = new Seller();
+			s.setEmail(request.getParameter("email"));
+			s.setPassword(request.getParameter("password"));
+			String email = request.getParameter("email");
+			boolean flag = SellerDao.checkEmail(email);
+			if(flag == true) {
+				Seller s1 = SellerDao.sellerLogin(s);
+				if(s1==null) {
+					request.setAttribute("msg2", "password is incorrect");
+					request.getRequestDispatcher("seller-login.jsp").forward(request, response);
+				}
+				else {
+					HttpSession session = request.getSession();
+					session.setAttribute("data", s1);
+					request.getRequestDispatcher("seller-home.jsp").forward(request, response);
+				}
+			}
+			else {
+				request.setAttribute("msg1", "account not registered");
+				request.getRequestDispatcher("seller-login.jsp").forward(request, response);
+			}
+			
+		}
+		else if(action.equalsIgnoreCase("update")) {
+			Seller s  = new Seller();
+			s.setId(Integer.parseInt(request.getParameter("id")));
+			s.setName(request.getParameter("name"));
+			s.setContact(Long.parseLong(request.getParameter("contact")));
+			s.setAddress(request.getParameter("address"));
+			s.setEmail(request.getParameter("email"));
+			SellerDao.updateSeller(s);
+			HttpSession session = request.getSession();
+			session.setAttribute("data", s);
+			request.getRequestDispatcher("seller-profile.jsp").forward(request, response);
 		}
 	}
 
