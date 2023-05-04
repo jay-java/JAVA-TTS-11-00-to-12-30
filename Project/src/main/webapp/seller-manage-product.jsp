@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%session.removeAttribute("data"); 
-session.invalidate();
-response.sendRedirect("index.jsp");
-%>
+
 </body>
 </html>

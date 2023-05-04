@@ -28,8 +28,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Product <i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                    <a href="seller-registration.jsp" class="dropdown-item">Upload Product</a>
-                                    <a href="customer-registration.jsp" class="dropdown-item">Manage Paroduct</a>
+                                    <a href="seller-upload-product.jsp" class="dropdown-item">Upload Product</a>
+                                    <a href="seller-manage-product.jsp" class="dropdown-item">Manage Paroduct</a>
                                 </div>
                             </div>
                              <div class="nav-item dropdown">
