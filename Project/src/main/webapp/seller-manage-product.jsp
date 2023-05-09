@@ -151,7 +151,7 @@
                             <td class="align-middle"><%=p.getPprice() %></td>
                             <td class="align-middle"><%=p.getPcategory() %></td>
                             <td class="align-middle"><%=p.getPdescription() %></td>
-                            <td class="align-middle"><a class="btn btn-success" href="seller-edit-product.jsp">Edit</a></td>
+                            <td class="align-middle"><a class="btn btn-success" href="seller-edit-product.jsp?id=<%=p.getPid()%>">Edit</a></td>
                             <td class="align-middle"><a class="btn btn-danger" href="seller-delete-product.jsp?id=<%=p.getPid()%>">Delete</a></td>
                         </tr>
                         <%} %>

@@ -63,4 +63,45 @@ public class ProductDao {
 			e.printStackTrace();
 		}
 	}
+	public static Product getProductById(int id) {
+		Product p = null;
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from product where pid=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			ResultSet rs  =pst.executeQuery();
+			if(rs.next()) {
+				p = new Product();
+				p.setPid(rs.getInt("pid"));
+				p.setSid(rs.getInt("sid"));
+				p.setImage(rs.getString("image"));
+				p.setPname(rs.getString("pname"));
+				p.setPprice(rs.getInt("pprice"));
+				p.setPcategory(rs.getString("pcategory"));
+				p.setPdescription(rs.getString("pdesc"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return p;
+	}
+	public static void updatePorduct(Product p) {
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "update product set sid=?,image=?,pname=?,pprice=?,pcategory=?,pdesc=? where pid=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, p.getSid());
+			pst.setString(2, p.getImage());
+			pst.setString(3, p.getPname());
+			pst.setInt(4, p.getPprice());
+			pst.setString(5, p.getPcategory());
+			pst.setString(6, p.getPdescription());
+			pst.setInt(7, p.getPid());
+			pst.executeUpdate();
+			System.out.println("product updated");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
