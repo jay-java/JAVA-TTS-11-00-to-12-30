@@ -40,21 +40,21 @@
             <div class="col-lg-7 mb-5">
                 <div class="contact-form bg-light p-30">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form action="CustomerController" method="post">
                         <div class="control-group">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email"
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" name="email"
                                 required="required" data-validation-required-message="Please enter your email" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="password" class="form-control" id="subject" placeholder="Your Password"
+                            <input type="password" class="form-control" id="subject" placeholder="Your Password" name="password"
                                 required="required" data-validation-required-message="Please enter a Password" />
                             <p class="help-block text-danger"></p>
                         </div>
                         
                         <div>
-                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Send
-                                Message</button>
+                            <button class="btn btn-primary py-2 px-4" name="action" value="login" type="submit" id="sendMessageButton">Login
+                                </button>
                         </div>
                     </form>
                 </div>

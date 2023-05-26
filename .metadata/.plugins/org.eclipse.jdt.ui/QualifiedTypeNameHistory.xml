@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ExceptionHandling.divide"/>
-    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="FileHandling.FileInputOUtputStream"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
@@ -55,9 +53,11 @@
     <fullyQualifiedTypeName name="connection.DBConnection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.MultipartConfig"/>
+    <fullyQualifiedTypeName name="dao.ProductDao"/>
+    <fullyQualifiedTypeName name="model.Customer"/>
+    <fullyQualifiedTypeName name="dao.CustomerDao"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="model.Product"/>
-    <fullyQualifiedTypeName name="dao.ProductDao"/>
 </qualifiedTypeNameHistroy>

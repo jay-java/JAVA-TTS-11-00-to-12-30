@@ -13,7 +13,7 @@ public class ProductDao {
 	public static void uploadProduct(Product p) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql = "insert into product(sid,image,pname,pprice,pcategory,pdesc) values(?,?,?,?,?,?)";
+			String sql = "insert into productdata(sid,image,pname,pprice,pcategory,pdesc) values(?,?,?,?,?,?)";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setInt(1, p.getSid());
 			pst.setString(2, p.getImage());
@@ -31,7 +31,7 @@ public class ProductDao {
 		List<Product> list  =new ArrayList<Product>();
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql = "select * from product where sid=?";
+			String sql = "select * from productdata where sid=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setInt(1, id);
 			ResultSet rs  =pst.executeQuery();
@@ -54,7 +54,7 @@ public class ProductDao {
 	public static void deleteProduct(int id) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql = "delete from product where pid=?";
+			String sql = "delete from productdata where pid=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setInt(1, id);
 			pst.executeUpdate();
@@ -67,7 +67,7 @@ public class ProductDao {
 		Product p = null;
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql = "select * from product where pid=?";
+			String sql = "select * from productdata where pid=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setInt(1, id);
 			ResultSet rs  =pst.executeQuery();
@@ -89,7 +89,7 @@ public class ProductDao {
 	public static void updatePorduct(Product p) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql = "update product set sid=?,image=?,pname=?,pprice=?,pcategory=?,pdesc=? where pid=?";
+			String sql = "update productdata set sid=?,image=?,pname=?,pprice=?,pcategory=?,pdesc=? where pid=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setInt(1, p.getSid());
 			pst.setString(2, p.getImage());
@@ -103,5 +103,28 @@ public class ProductDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public static List<Product> getAllProduct(){
+		List<Product> lsit = new ArrayList<Product>();
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from productdata";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			while(rs.next()) {
+				Product p = new Product();
+				p.setPid(rs.getInt("pid"));
+				p.setSid(rs.getInt("sid"));
+				p.setImage(rs.getString("image"));
+				p.setPname(rs.getString("pname"));
+				p.setPprice(rs.getInt("pprice"));
+				p.setPcategory(rs.getString("pcategory"));
+				p.setPdescription(rs.getString("pdesc"));
+				lsit.add(p);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return lsit;
 	}
 }

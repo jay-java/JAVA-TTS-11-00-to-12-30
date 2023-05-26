@@ -11,7 +11,7 @@ public class SellerDao {
 	public static void insertSeller(Seller s) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql="insert into sellerdata(name,contact,address,email,password) values(?,?,?,?,?)";
+			String sql="insert into sellerd(name,contact,address,email,password) values(?,?,?,?,?)";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, s.getName());
 			pst.setLong(2, s.getContact());
@@ -28,7 +28,7 @@ public class SellerDao {
 		boolean flag = false;
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql="select * from sellerdata where email=?";
+			String sql="select * from sellerd where email=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, email);
 			ResultSet rs = pst.executeQuery();
@@ -44,7 +44,7 @@ public class SellerDao {
 		Seller s1 = null;
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql="select * from sellerdata where email=? and password=?";
+			String sql="select * from sellerd where email=? and password=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, s.getEmail());
 			pst.setString(2, s.getPassword());
@@ -66,7 +66,7 @@ public class SellerDao {
 	public static void updateSeller(Seller s) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql="update sellerdata set name=?,contact=?,address=?,email=? where id=?";
+			String sql="update sellerd set name=?,contact=?,address=?,email=? where id=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, s.getName());
 			pst.setLong(2, s.getContact());
@@ -83,7 +83,7 @@ public class SellerDao {
 		boolean flag = false;
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql="select * from sellerdata where email=? and password=?";
+			String sql="select * from sellerd where email=? and password=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, email);
 			pst.setString(2, op);
@@ -99,7 +99,7 @@ public class SellerDao {
 	public static void updatePassword(String email,String np) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql="update sellerdata set password=? where email=?";
+			String sql="update sellerd set password=? where email=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, np);
 			pst.setString(2, email);
